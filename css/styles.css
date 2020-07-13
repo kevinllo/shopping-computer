@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+button{
+    font-family: 'Poppins', sans-serif;
+}
+header {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    height: 10vh;
+}
+
+.logo-container,
+.nav-links,
+.card {
+    display: flex;
+}
+.hamburger{
+    display: none;
+}
+header a{
+    flex: 1;
+}
+header a{
+    text-decoration: none;
+    color:  #5f5f89;
+}
+.logo {
+    font-weight: 400;
+    margin: 5px;
+}
+
+nav {
+    flex: 2; 
+   
+}
+
+.nav-links {
+    justify-content: space-around;
+    list-style: none;
+}
+
+.nav-link {
+    color: #5f5f89;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.card {
+    flex: 1;
+    justify-content: flex-end;
+    cursor: pointer;
+   
+}
+.menu-icon{
+    display: none;
+}
+
+.presentation {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    min-height: 80vh;
+    align-items: center;
+}
+.introduction{
+    flex: 1;
+}
+.intro-text h1{
+    font-size: 44px;
+    font-weight: 500;
+    background: linear-gradient(to right, #494964, #6f6f89);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.intro-text p{
+    margin-top: 5px;
+    font-size: 22px;
+    color: #585772;
+}
+.buttons-container{
+    padding: 50px 0px 0px 0px;
+}
+.button-select{
+    border: 2px solid rgba(249, 96, 76);
+    background: transparent;
+    color: rgba(249, 96, 76);
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.button-select a{
+    margin-right: 15%;
+}
+.button-select img{
+    margin-left: 15%;
+}
+
+.button-add{
+    background: rgba(249, 96, 76);
+    border: none;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    color:white;
+    margin: 30px 0px 0px 30px;
+}
+.button-select:active, .button-select:focus{
+    outline: none;
+    border:  2px solid rgba(249, 96, 76);
+}
+.button-add:active, .button-add:focus{
+    outline: none;
+    border: none;
+}
+.cover{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    height: 60vh;
+}
+.cover img{
+    height: 100%;
+    filter: drop-shadow(0px 3px 5px black);
+    animation: drop 1.5s ease;
+}
+.big-circle{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index:-1;
+    opacity: 0.7;
+    height: 80%;
+    width: 50%
+    ;
+}
+.laptop-select{
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    right: 20%;
+}
+@keyframes drop{
+    0%{
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+}
+@media screen and (max-width: 1150px){
+    .button-add{
+        margin: 30px 0px 0px 0px;
+    }
+    .buttons-container{
+        margin: 0px 0px 0px 30px;
+    }
+}
+@media screen and (max-width: 1024px){
+    .presentation{
+        flex-direction: column;
+    }
+    .introduction{
+        margin-top: 5vh;
+        text-align: center;
+    }
+    .intro-text h1{
+        font-size: 30px;
+    }
+    .intro-text p{
+        font-size: 18px;
+    }
+    .buttons-container{
+        padding: 10px 0px 0px 0px;
+    }
+    .button-add{
+        margin: 30px 0px 0px 30px;
+    }
+    .laptop-select{
+        bottom: 5%;
+        right: 50%;
+        width: 50%;
+        transform: translate(50%, 5%);
+    }
+    .cover img{
+        height: 80%;
+    }
+    
+}
+@media screen and (max-width: 768px){
+    .line {
+        width: 30px;
+        height: 3px;
+        background: rgb(68, 68, 68);
+        margin: 5px;
+      }
+      .line-02{
+        width: 30px;
+        height: 3px;
+        background: rgb(68, 68, 68);
+        margin: 5px;
+      }
+      .line-03{
+        width: 30px;
+        height: 3px;
+        background: rgb(68, 68, 68);
+        margin: 5px;
+      }
+      .line-white{
+        width: 30px;
+        height: 3px;
+        background: rgb(255, 255, 255);
+        margin: 5px;
+      }
+  
+      .hamburger{
+          position: absolute;
+          display: block;
+          top: 35%;
+          right: 4px;
+          cursor: pointer; 
+          z-index: 100;
+          
+      }
+      header a{
+          flex:1;
+      }
+      .card{
+          flex:0;
+      }
+      .nav-links{ 
+        position: fixed;
+        z-index:1;
+        height: 100vh;
+        right:0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        transition: all 1s ease;
+        background:#5b78c7;
+      }
+      .nav-link{
+          color: white;
+      }
+     
+      .close{
+          -webkit-clip-path: circle(0% at 100% 0%);
+          clip-path:  circle(0% at 100% 0%);
+      }
+      .open{
+        -webkit-clip-path: circle(150% at 100% 0%);
+        clip-path:  circle(150% at 100% 0%);
+      }
+      nav{
+          position: relative;
+          flex:1;
+          height:10vh
+      }
+   
+}
+/*9:50mn
+
+34:05/*
